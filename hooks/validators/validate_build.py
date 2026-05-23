@@ -135,20 +135,19 @@ def main() -> int:
         sys.exit(0)
 
     transcript_path = data.get("transcript_path", "")
-    text, prompt_text = _scan_transcript(transcript_path)
+    text, prompt_text = _scan_transcript(transcript_path, max_assistant=15)
 
     # If the human prompt itself signals a read-only/cron turn, skip validation
     if any(sig in prompt_text for sig in _READONLY_SIGNALS):
-        print(json.dumps({"result": "continue", "message": "Read-only prompt — no validation required."}))
+        print(json.dumps({}))
         sys.exit(0)
 
     if any(sig in text for sig in _READONLY_SIGNALS):
-        print(json.dumps({"result": "continue", "message": "Read-only turn — no validation required."}))
+        print(json.dumps({}))
         sys.exit(0)
 
     if any(sig in text for sig in _SIGNALS):
-        # Validation evidence found
-        print(json.dumps({"result": "continue", "message": "Validation summary found."}))
+        print(json.dumps({}))
         sys.exit(0)
 
     # No validation found — block
