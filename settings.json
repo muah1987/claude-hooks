@@ -1,0 +1,616 @@
+{
+  "env": {
+    "HF_TOKEN": "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",
+    "GITHUB_TOKEN": "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",
+    "GH_TOKEN": "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",
+    "OLLAMA_API_KEY": "c608f3ca087443d49b3e322cd77f8725.lGAz3GE8oX4huG_IyV0C-QR2",
+    "OLLAMA_API_KEY_2": "ed77e3e587f84d90ae33c682266c4b3e.mniXRRM13umE32FZZrTBG463",
+    "OMDB_API_KEY": "1b564b87",
+    "CF_API_TOKEN": "cfut_nP9D1xPAO9fWLjuRltQioR5SGw9jjp9NgOv9yiF51ba77daa",
+    "VPS_HOST": "51.195.86.239",
+    "VPS_USER": "ubuntu",
+    "VPS_PASSWORD": "19!Zainul87",
+    "VPS2_HOST": "198.245.53.10",
+    "VPS2_USER": "ubuntu",
+    "VPS2_PASSWORD": "19!Zainul87",
+    "OLLAMA_API_BASE": "https://api.ollama.com"
+  },
+  "permissions": {
+    "allow": [
+      "Bash(*)",
+      "Bash(apt-get:*)",
+      "Bash(apt:*)",
+      "Bash(awk:*)",
+      "Bash(base64:*)",
+      "Bash(basename:*)",
+      "Bash(bg:*)",
+      "Bash(bun:*)",
+      "Bash(cat:*)",
+      "Bash(chmod:*)",
+      "Bash(column:*)",
+      "Bash(compgen:*)",
+      "Bash(cp:*)",
+      "Bash(crontab:*)",
+      "Bash(curl:*)",
+      "Bash(cut:*)",
+      "Bash(date:*)",
+      "Bash(declare:*)",
+      "Bash(diff:*)",
+      "Bash(dig:*)",
+      "Bash(dirname:*)",
+      "Bash(docker:*)",
+      "Bash(dpkg:*)",
+      "Bash(echo:*)",
+      "Bash(env:*)",
+      "Bash(export:*)",
+      "Bash(false:*)",
+      "Bash(fg:*)",
+      "Bash(file:*)",
+      "Bash(find:*)",
+      "Bash(git:*)",
+      "Bash(grep:*)",
+      "Bash(gzip:*)",
+      "Bash(head:*)",
+      "Bash(host:*)",
+      "Bash(jobs:*)",
+      "Bash(journalctl:*)",
+      "Bash(jq:*)",
+      "Bash(kill:*)",
+      "Bash(ln:*)",
+      "Bash(local:*)",
+      "Bash(ls:*)",
+      "Bash(lsof:*)",
+      "Bash(md5sum:*)",
+      "Bash(mkdir:*)",
+      "Bash(mktemp:*)",
+      "Bash(mv:*)",
+      "Bash(netstat:*)",
+      "Bash(node:*)",
+      "Bash(nohup:*)",
+      "Bash(npm:*)",
+      "Bash(npx:*)",
+      "Bash(nslookup:*)",
+      "Bash(od:*)",
+      "Bash(openssl:*)",
+      "Bash(patch:*)",
+      "Bash(pgrep:*)",
+      "Bash(ping:*)",
+      "Bash(pip3:*)",
+      "Bash(pip:*)",
+      "Bash(pkill:*)",
+      "Bash(pnpm:*)",
+      "Bash(printenv:*)",
+      "Bash(printf:*)",
+      "Bash(ps:*)",
+      "Bash(pwd:*)",
+      "Bash(python3:*)",
+      "Bash(python:*)",
+      "Bash(read:*)",
+      "Bash(readlink:*)",
+      "Bash(realpath:*)",
+      "Bash(return:*)",
+      "Bash(rm:*)",
+      "Bash(rmdir:*)",
+      "Bash(rsync:*)",
+      "Bash(ruff:*)",
+      "Bash(sed:*)",
+      "Bash(service:*)",
+      "Bash(set:*)",
+      "Bash(sha256sum:*)",
+      "Bash(sleep:*)",
+      "Bash(snap:*)",
+      "Bash(sort:*)",
+      "Bash(source:*)",
+      "Bash(ss:*)",
+      "Bash(ssh:*)",
+      "Bash(stat:*)",
+      "Bash(strings:*)",
+      "Bash(stty:*)",
+      "Bash(sudo apt install:*)",
+      "Bash(sudo apt-get:*)",
+      "Bash(sudo apt:*)",
+      "Bash(sudo chattr:*)",
+      "Bash(sudo chmod:*)",
+      "Bash(sudo chown:*)",
+      "Bash(sudo nano:*)",
+      "Bash(sudo systemctl:*)",
+      "Bash(sudo tee:*)",
+      "Bash(sudo:*)",
+      "Bash(systemctl:*)",
+      "Bash(tail:*)",
+      "Bash(tar:*)",
+      "Bash(tee:*)",
+      "Bash(test:*)",
+      "Bash(touch:*)",
+      "Bash(tput:*)",
+      "Bash(tr:*)",
+      "Bash(true:*)",
+      "Bash(type:*)",
+      "Bash(unlink:*)",
+      "Bash(unset:*)",
+      "Bash(unzip:*)",
+      "Bash(uv:*)",
+      "Bash(wait:*)",
+      "Bash(wc:*)",
+      "Bash(wget:*)",
+      "Bash(which:*)",
+      "Bash(xargs:*)",
+      "Bash(xxd:*)",
+      "Bash(yarn:*)",
+      "Bash(yq:*)",
+      "Bash(zip:*)",
+      "Edit",
+      "Edit(~/.claude/*)",
+      "Glob",
+      "Grep",
+      "MultiEdit",
+      "NotebookEdit",
+      "NotebookRead",
+      "Read",
+      "TodoWrite",
+      "WebFetch",
+      "WebSearch",
+      "Write",
+      "Write(~/.claude/*)"
+    ],
+    "deny": []
+  },
+  "model": "sonnet",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$HOME/.local/bin/uv run $HOME/.claude/hooks/pre_tool_use.py --cognitive",
+            "timeout": 15,
+            "statusMessage": "\u283f Validating tool call..."
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "\\.(ts|tsx|js|jsx)$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node $HOME/.claude/hooks/validators/ts_eslint_validator.js",
+            "timeout": 30,
+            "statusMessage": "\u283f ESLint..."
+          },
+          {
+            "type": "command",
+            "command": "node $HOME/.claude/hooks/validators/ts_tsc_validator.js",
+            "timeout": 30,
+            "statusMessage": "\u283f TypeScript check..."
+          }
+        ]
+      },
+      {
+        "matcher": "\\.py$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$HOME/.local/bin/uv run $HOME/.claude/hooks/post_tool_use.py",
+            "timeout": 10,
+            "statusMessage": "\u283f Linting Python..."
+          }
+        ]
+      },
+      {
+        "matcher": "\\.sh$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$HOME/.local/bin/uv run $HOME/.claude/hooks/validators/shellcheck_validator.py",
+            "timeout": 10,
+            "statusMessage": "\u283f Shellcheck..."
+          }
+        ]
+      },
+      {
+        "matcher": "\\.(yml|yaml)$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$HOME/.local/bin/uv run $HOME/.claude/hooks/validators/yaml_validator.py",
+            "timeout": 10,
+            "statusMessage": "\u283f YAML lint..."
+          }
+        ]
+      },
+      {
+        "matcher": "\\.md$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$HOME/.local/bin/uv run $HOME/.claude/hooks/validators/markdown_validator.py",
+            "timeout": 10,
+            "statusMessage": "\u283f Markdown lint..."
+          }
+        ]
+      },
+      {
+        "matcher": "\\.rs$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$HOME/.local/bin/uv run $HOME/.claude/hooks/validators/rust_validator.py",
+            "timeout": 35,
+            "statusMessage": "\u283f Cargo check..."
+          }
+        ]
+      },
+      {
+        "matcher": "\\.go$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$HOME/.local/bin/uv run $HOME/.claude/hooks/validators/go_validator.py",
+            "timeout": 35,
+            "statusMessage": "\u283f Go vet..."
+          }
+        ]
+      },
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$HOME/.local/bin/uv run $HOME/.claude/hooks/post_tool_use.py --log-only",
+            "async": true
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$HOME/.local/bin/uv run $HOME/.claude/hooks/notification.py --notify",
+            "timeout": 15,
+            "statusMessage": "\u283f Sending notification..."
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$HOME/.local/bin/uv run $HOME/.claude/hooks/stop.py --chat",
+            "timeout": 45,
+            "statusMessage": "\u283f Saving session..."
+          },
+          {
+            "type": "command",
+            "command": "$HOME/.local/bin/uv run $HOME/.claude/hooks/telegram_notify.py --event stop",
+            "timeout": 15,
+            "async": true
+          },
+          {
+            "type": "command",
+            "command": "$HOME/.local/bin/uv run $HOME/.claude/hooks/issue_notifier.py",
+            "timeout": 30,
+            "async": true
+          },
+          {
+            "type": "command",
+            "command": "$HOME/.local/bin/uv run $HOME/.claude/scripts/memory_tracker.py",
+            "timeout": 20,
+            "async": true
+          },
+          {
+            "type": "command",
+            "command": "$HOME/.local/bin/uv run $HOME/.claude/scripts/harness_sync.py",
+            "timeout": 30,
+            "async": true,
+            "statusMessage": "\u283f Syncing harness..."
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$HOME/.local/bin/uv run $HOME/.claude/hooks/subagent_stop.py --notify --trigger --cognitive",
+            "timeout": 30,
+            "statusMessage": "\u283f Processing agent result..."
+          },
+          {
+            "type": "command",
+            "command": "$HOME/.local/bin/uv run $HOME/.claude/hooks/telegram_notify.py --event subagent_stop",
+            "timeout": 15,
+            "async": true
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$HOME/.local/bin/uv run $HOME/.claude/hooks/intelligence_advisor.py",
+            "timeout": 5,
+            "statusMessage": "\u283f Routing prompt..."
+          },
+          {
+            "type": "command",
+            "command": "$HOME/.local/bin/uv run $HOME/.claude/hooks/user_prompt_submit.py --log-only --store-last-prompt --name-agent",
+            "timeout": 10,
+            "statusMessage": "\u283f Logging..."
+          },
+          {
+            "type": "command",
+            "command": "$HOME/.local/bin/uv run $HOME/.claude/hooks/model_router.py",
+            "timeout": 10,
+            "statusMessage": "\u283f Selecting model..."
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$HOME/.local/bin/uv run $HOME/.claude/hooks/pre_compact.py",
+            "timeout": 60
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$HOME/.local/bin/uv run $HOME/.claude/hooks/session_init.py",
+            "timeout": 10,
+            "statusMessage": "\u27f2 Checking memory, codebase & last stop..."
+          },
+          {
+            "type": "command",
+            "command": "$HOME/.local/bin/uv run $HOME/.claude/hooks/session_start.py --assess",
+            "timeout": 30,
+            "statusMessage": "Loading session context..."
+          },
+          {
+            "type": "command",
+            "command": "$HOME/.local/bin/uv run $HOME/.claude/hooks/project_context.py",
+            "timeout": 15,
+            "statusMessage": "Loading project context..."
+          },
+          {
+            "type": "command",
+            "command": "$HOME/.local/bin/uv run $HOME/.claude/hooks/start_telegram_bridge.py",
+            "timeout": 20,
+            "statusMessage": "Starting Telegram bridge (@muah1987_bot)..."
+          },
+          {
+            "type": "command",
+            "command": "$HOME/.local/bin/uv run $HOME/.claude/hooks/vault_inject.py",
+            "timeout": 10,
+            "statusMessage": "Loading project vault..."
+          },
+          {
+            "type": "command",
+            "command": "$HOME/.local/bin/uv run $HOME/.claude/scripts/fetch_profile.py",
+            "timeout": 10,
+            "async": true
+          },
+          {
+            "type": "command",
+            "command": "$HOME/.local/bin/uv run $HOME/.claude/scripts/fetch_usage.py fetch",
+            "timeout": 10,
+            "async": true
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$HOME/.local/bin/uv run $HOME/.claude/hooks/session_end.py",
+            "timeout": 30
+          }
+        ]
+      }
+    ],
+    "PermissionRequest": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$HOME/.local/bin/uv run $HOME/.claude/hooks/permission_request.py --log-only --cognitive",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PostToolUseFailure": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$HOME/.local/bin/uv run $HOME/.claude/hooks/post_tool_use_failure.py",
+            "timeout": 15
+          }
+        ]
+      }
+    ],
+    "SubagentStart": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$HOME/.local/bin/uv run $HOME/.claude/hooks/subagent_start.py",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "Setup": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$HOME/.local/bin/uv run $HOME/.claude/hooks/setup.py",
+            "timeout": 60
+          }
+        ]
+      }
+    ],
+    "TeammateIdle": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$HOME/.local/bin/uv run $HOME/.claude/hooks/teammate_idle.py --log-only",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "TaskCompleted": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$HOME/.local/bin/uv run $HOME/.claude/hooks/task_completed.py --log-only --trigger --cognitive",
+            "timeout": 30,
+            "statusMessage": "\u283f Task wrap-up..."
+          },
+          {
+            "type": "command",
+            "command": "$HOME/.local/bin/uv run $HOME/.claude/hooks/telegram_notify.py --event task_completed",
+            "timeout": 15,
+            "async": true
+          }
+        ]
+      }
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "$HOME/.local/bin/uv run $HOME/.claude/status_lines/status_line_v33.py",
+    "padding": 0
+  },
+  "enabledPlugins": {
+    "rust-analyzer-lsp@claude-plugins-official": true,
+    "frontend-design@claude-plugins-official": true,
+    "superpowers@claude-plugins-official": true,
+    "context7@claude-plugins-official": true,
+    "code-review@claude-plugins-official": true,
+    "code-simplifier@claude-plugins-official": true,
+    "github@claude-plugins-official": true,
+    "playwright@claude-plugins-official": true,
+    "feature-dev@claude-plugins-official": true,
+    "skill-creator@claude-plugins-official": true,
+    "claude-md-management@claude-plugins-official": true,
+    "ralph-loop@claude-plugins-official": true,
+    "typescript-lsp@claude-plugins-official": true,
+    "security-guidance@claude-plugins-official": true,
+    "commit-commands@claude-plugins-official": true,
+    "figma@claude-plugins-official": true,
+    "claude-code-setup@claude-plugins-official": true,
+    "pr-review-toolkit@claude-plugins-official": true,
+    "pyright-lsp@claude-plugins-official": true,
+    "serena@claude-plugins-official": true,
+    "vercel@claude-plugins-official": true,
+    "telegram@claude-plugins-official": true,
+    "agent-sdk-dev@claude-plugins-official": true,
+    "explanatory-output-style@claude-plugins-official": true,
+    "plugin-dev@claude-plugins-official": true,
+    "hookify@claude-plugins-official": true,
+    "playground@claude-plugins-official": true,
+    "chrome-devtools-mcp@claude-plugins-official": true,
+    "linear@claude-plugins-official": true,
+    "learning-output-style@claude-plugins-official": true,
+    "csharp-lsp@claude-plugins-official": true,
+    "gopls-lsp@claude-plugins-official": true,
+    "gitlab@claude-plugins-official": true,
+    "sentry@claude-plugins-official": true,
+    "jdtls-lsp@claude-plugins-official": true,
+    "huggingface-skills@claude-plugins-official": true,
+    "php-lsp@claude-plugins-official": true,
+    "stripe@claude-plugins-official": true,
+    "firecrawl@claude-plugins-official": true,
+    "clangd-lsp@claude-plugins-official": true,
+    "firebase@claude-plugins-official": true,
+    "laravel-boost@claude-plugins-official": true,
+    "swift-lsp@claude-plugins-official": true,
+    "kotlin-lsp@claude-plugins-official": true,
+    "remember@claude-plugins-official": true,
+    "lua-lsp@claude-plugins-official": true,
+    "postman@claude-plugins-official": true,
+    "qodo-skills@claude-plugins-official": true,
+    "posthog@claude-plugins-official": true,
+    "imessage@claude-plugins-official": true,
+    "pinecone@claude-plugins-official": true,
+    "mcp-server-dev@claude-plugins-official": true,
+    "atomic-agents@claude-plugins-official": true,
+    "sonatype-guide@claude-plugins-official": true,
+    "data-engineering@claude-plugins-official": true,
+    "ruby-lsp@claude-plugins-official": true,
+    "searchfit-seo@claude-plugins-official": true,
+    "data@claude-plugins-official": true,
+    "product-tracking-skills@claude-plugins-official": true,
+    "prisma@claude-plugins-official": true,
+    "mongodb@claude-plugins-official": true,
+    "railway@claude-plugins-official": true,
+    "netlify-skills@claude-plugins-official": true,
+    "ai-plugins@claude-plugins-official": true,
+    "elixir-ls-lsp@claude-plugins-official": true,
+    "interface-design@interface-design": true,
+    "terraform@claude-plugins-official": true,
+    "cloudflare@claude-plugins-official": true,
+    "supabase@claude-plugins-official": true,
+    "session-report@claude-plugins-official": true,
+    "slack@claude-plugins-official": true,
+    "discord@claude-plugins-official": true,
+    "neon@claude-plugins-official": true,
+    "pydantic-ai@claude-plugins-official": true,
+    "sonarqube@claude-plugins-official": true,
+    "expo@claude-plugins-official": true,
+    "microsoft-docs@claude-plugins-official": true,
+    "zapier@claude-plugins-official": true,
+    "atlassian@claude-plugins-official": true,
+    "sanity@claude-plugins-official": true,
+    "fakechat@claude-plugins-official": true,
+    "shopify@claude-plugins-official": true
+  },
+  "extraKnownMarketplaces": {
+    "interface-design": {
+      "source": {
+        "source": "github",
+        "repo": "Dammyjay93/interface-design"
+      },
+      "autoUpdate": true
+    }
+  },
+  "effortLevel": "medium",
+  "skipDangerousModePermissionPrompt": true
+}
