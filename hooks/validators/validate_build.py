@@ -85,9 +85,14 @@ def _extract_content(content: object) -> str:
     return ""
 
 
-def _last_message_texts(transcript_path: str) -> tuple[str, str]:
-    """Return (last_assistant_text, last_human_text) from the JSONL transcript."""
-    assistant_text = ""
+def _scan_transcript(transcript_path: str, max_assistant: int = 6) -> tuple[str, str]:
+    """Return (combined_recent_assistant_text, last_human_text).
+
+    Scans the last `max_assistant` assistant messages so that a response
+    ending with tool calls (which produces a tool_use-only final entry)
+    doesn't hide a Validation Summary written in the preceding text block.
+    """
+    assistant_parts: list[str] = []
     human_text = ""
     try:
         path = Path(transcript_path)
@@ -105,15 +110,17 @@ def _last_message_texts(transcript_path: str) -> tuple[str, str]:
             msg = entry.get("message") or entry
             role = msg.get("role") or entry.get("type") or ""
             content = msg.get("content") or ""
-            if role in ("assistant", "text") and not assistant_text:
-                assistant_text = _extract_content(content)
+            if role in ("assistant", "text"):
+                text = _extract_content(content)
+                if text.strip():
+                    assistant_parts.append(text)
+                if len(assistant_parts) >= max_assistant:
+                    break
             elif role in ("user", "human") and not human_text:
                 human_text = _extract_content(content)
-            if assistant_text and human_text:
-                break
     except Exception:
         pass
-    return assistant_text, human_text
+    return " ".join(assistant_parts), human_text
 
 
 def main() -> int:
@@ -128,7 +135,7 @@ def main() -> int:
         sys.exit(0)
 
     transcript_path = data.get("transcript_path", "")
-    text, prompt_text = _last_message_texts(transcript_path)
+    text, prompt_text = _scan_transcript(transcript_path)
 
     # If the human prompt itself signals a read-only/cron turn, skip validation
     if any(sig in prompt_text for sig in _READONLY_SIGNALS):
