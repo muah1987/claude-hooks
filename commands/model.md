@@ -18,8 +18,29 @@ TASK: $ARGUMENTS
 ## Commands
 
 ### Switch to a Claude model
-If `TASK` is `haiku`, `sonnet`, `opus`, or starts with `claude-`:
-→ Reply: "Use the built-in `/model <name>` command. Available: `haiku` (claude-haiku-4-5), `sonnet` (claude-sonnet-4-6), `opus` (claude-opus-4-7)"
+If `TASK` is `haiku`, `sonnet`, `opus`, `fable`, or starts with `claude-`:
+
+1. Map short names to full model IDs:
+   - `haiku` → `claude-haiku-4-5`
+   - `sonnet` → `claude-sonnet-4-6`
+   - `opus` → `claude-opus-4-8`
+   - `fable` or `fable 5` or `claude-fable-5` → `claude-fable-5`
+   - Any string starting with `claude-` → use as-is
+
+2. Write the resolved name to `~/.claude/settings.json` under the `"model"` key:
+   ```bash
+   python3 - <<'EOF'
+   import json, pathlib, sys
+   p = pathlib.Path.home() / ".claude/settings.json"
+   d = json.loads(p.read_text()) if p.exists() else {}
+   d["model"] = MODEL_NAME
+   p.write_text(json.dumps(d, indent=2))
+   print(f"✓ Model set to {d['model']} in {p}")
+   EOF
+   ```
+   Replace `MODEL_NAME` with the resolved model string (quoted).
+
+3. Reply: "✓ Switched to **<resolved-name>**. The new model is active for your next message (settings.json updated)."
 
 ### Switch to an Ollama cloud model
 For any other model name (e.g. `qwen3-coder:480b-cloud`, `kimi-k2-thinking:cloud`):
