@@ -1,7 +1,7 @@
 ---
-name: model
-description: Model switching and auto-routing. Switch to any Claude or Ollama cloud model by name, check current rate-limit status, inspect the routing table, start the background watcher, or manually select the best model for a task by type and complexity.
-argument-hint: "<model-name> | status | list | watch | select <score> <type>"
+name: router
+description: Ollama cloud routing and rate-limit status. Use /model (built-in) to switch Claude models. Use /router for Ollama cloud models, status, list, watch, or auto-select.
+argument-hint: "<ollama-model> | status | list | watch | select <score> <type>"
 allowed-tools: Bash, Read
 ---
 
